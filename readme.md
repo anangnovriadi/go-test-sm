@@ -30,7 +30,7 @@ go run main.go
 
 Login
 ```curl
-curl -X POST http://localhost:3000/api/register \
+curl -X POST http://localhost:3010/api/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Anang Novriadi",
@@ -41,7 +41,7 @@ curl -X POST http://localhost:3000/api/register \
 
 Register
 ```curl
-curl -X POST http://localhost:3000/api/login \
+curl -X POST http://localhost:3010/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "anangnov99@gmail.com",
@@ -51,7 +51,7 @@ curl -X POST http://localhost:3000/api/login \
 
 Get User
 ```curl
-curl -X GET http://localhost:3000/api/user \
+curl -X GET http://localhost:3010/api/user \
   -H "Authorization: Bearer <your_token>"
 ```
 
