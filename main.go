@@ -25,7 +25,7 @@ func main() {
 
 	port := os.Getenv("APP_PORT")
 	if port == "" {
-		port = "3000"
+		port = "3010"
 	}
 	log.Fatal(app.Listen(":" + port))
 }
