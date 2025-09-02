@@ -28,7 +28,7 @@ go run main.go
 
 ## Example API
 
-Login
+Login (Local)
 ```curl
 curl -X POST http://localhost:3010/api/register \
   -H "Content-Type: application/json" \
@@ -39,7 +39,18 @@ curl -X POST http://localhost:3010/api/register \
   }'
 ```
 
-Register
+Login (Server)
+```curl
+curl -X POST http://203.194.114.203:3010/api/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Anang Novriadi",
+    "email": "anangnov99@gmail.com",
+    "password": "12345678"
+  }'
+```
+
+Register (Local)
 ```curl
 curl -X POST http://localhost:3010/api/login \
   -H "Content-Type: application/json" \
@@ -49,9 +60,25 @@ curl -X POST http://localhost:3010/api/login \
   }'
 ```
 
-Get User
+Register (Server)
+```curl
+curl -X POST http://203.194.114.203:3010/api/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "anangnov99@gmail.com",
+    "password": "12345678"
+  }'
+```
+
+Get User (Local)
 ```curl
 curl -X GET http://localhost:3010/api/user \
+  -H "Authorization: Bearer <your_token>"
+```
+
+Get User (Server)
+```curl
+curl -X GET http://203.194.114.203:3010/api/user \
   -H "Authorization: Bearer <your_token>"
 ```
 
